@@ -68,13 +68,6 @@
   '';
 
 
-
-
-
-
-
-
-
   nixpkgs.config.qt5 = {
     enable = true;
     platformTheme = "qt5ct";
