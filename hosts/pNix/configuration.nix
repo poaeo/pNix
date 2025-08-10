@@ -250,11 +250,16 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  networking.firewall = rec {
-    allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
-    allowedUDPPortRanges = allowedTCPPortRanges;
-  };
 
+  networking.firewall = rec {
+    allowedTCPPortRanges = [ 
+      { from = 1714; to = 1764; }   # KDE Connect
+      { from = 6881; to = 6999; }   # BitTorrent for Stremio
+    ];
+    allowedUDPPortRanges = allowedTCPPortRanges;
+    allowedTCPPorts = [ 11470 ];    # Stremio main port
+    allowedUDPPorts = [ 11470 ];    # Stremio main port
+  };
 
 
 
