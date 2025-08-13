@@ -6,7 +6,7 @@
 with pkgs;
 [
   #spyder
-
+  protonvpn-gui
 
 
   corepack
