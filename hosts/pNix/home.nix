@@ -26,7 +26,7 @@ in
     ##../../home/programs/firefox.nix
     #inputs.hyprland.homeManagerModules.default
     #inputs.nixvim.homeManagerModules.nixvim
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
   ];
 
   home.packages = allPackages;

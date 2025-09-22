@@ -26,7 +26,7 @@
 
 
 
-
+  services.flatpak.enable = true;
 
 
   hardware = {
@@ -148,7 +148,7 @@
   xdg-desktop-portal
   #xdg-desktop-portal-gtk # optional fallback
   #gnome-keyring     # or use kwallet if preferred
-  libsForQt5.plasma-browser-integration
+  #libsForQt5.plasma-browser-integration
   kdePackages.plasma-browser-integration
 ];
 
@@ -212,6 +212,9 @@
   home-manager.backupFileExtension = "backup";
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19"
+  ];
 
   nix = {
     settings = {
@@ -251,16 +254,16 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  networking.firewall = rec {
+  networking.firewall = {
     allowedTCPPortRanges = [ 
       { from = 1714; to = 1764; }   # KDE Connect
       { from = 6881; to = 6999; }   # BitTorrent for Stremio
+      { from = 11470; to = 11480; } # Stremio Main Range
     ];
-    allowedUDPPortRanges = allowedTCPPortRanges;
+    allowedUDPPortRanges = [
+      { from = 6881; to = 6999; }   # BitTorrent UDP
+    ];
     allowedTCPPorts = [ 11470 ];    # Stremio main port
     allowedUDPPorts = [ 11470 ];    # Stremio main port
   };
-
-
-
 }

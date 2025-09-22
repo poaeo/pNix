@@ -6,9 +6,11 @@
 with pkgs;
 [
   #spyder
+  krita
+  inkscape
+  obs-studio
   protonvpn-gui
-
-
+  gemini-cli
   corepack
   #pnpm
   gemini-cli
@@ -84,7 +86,7 @@ with pkgs;
   #slop
 
   #FUN
-  stremio
+  # stremio
   brave
 
 
@@ -93,7 +95,7 @@ with pkgs;
   qt6Packages.qt5compat
   libsForQt5.kdbusaddons
   libsForQt5.qt5.qtgraphicaleffects
-  libsForQt5.kpmcore
+  kdePackages.kpmcore
   kdePackages.qtbase
   kdePackages.qtdeclarative
   kdePackages.qt5compat
@@ -124,7 +126,7 @@ with pkgs;
   encfs
   clamav
   #rkhunter
-  chkrootkit
+  #chkrootkit
 
 ]
 

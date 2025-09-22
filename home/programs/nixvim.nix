@@ -42,6 +42,9 @@
 
       nvim-tree = {
         enable = true;
+        settings = {
+          renderer.highlight_git = true;
+          };
         openOnSetup = true;
         disableNetrw = true;
         hijackNetrw = true;
@@ -51,7 +54,7 @@
           side = "left";
         };
         renderer = {
-          highlightGit = true;
+          #highlight_git = true;
           icons.show.file = true;
           icons.show.folder = true;
         };
