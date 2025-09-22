@@ -43,22 +43,23 @@
       nvim-tree = {
         enable = true;
         settings = {
-          renderer.highlight_git = true;
-          };
+          renderer = {
+            highlight_git = true;
+            icons.show.file = true;
+            icons.show.folder = true;
+            };
+            view = {
+              width = 30;
+              side = "left";
+            };
+            disableNetrw = true;
+            hijackNetrw = true;
+            updateFocusedFile.enable = true;
         openOnSetup = true;
-        disableNetrw = true;
-        hijackNetrw = true;
-        updateFocusedFile.enable = true;
-        view = {
-          width = 30;
-          side = "left";
         };
-        renderer = {
-          #highlight_git = true;
-          icons.show.file = true;
-          icons.show.folder = true;
-        };
-      };
+          };
+        
+        
 
       telescope = {
         enable = true;
