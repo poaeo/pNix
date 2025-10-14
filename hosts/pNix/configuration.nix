@@ -13,6 +13,8 @@
   ];
 
 
+
+#  environment.etc."calib-data.bin".source = inputs.calibData;
   xdg.portal = {
     enable = true;
     extraPortals = [pkgs.kdePackages.xdg-desktop-portal-kde];
@@ -25,9 +27,13 @@
   };
 
 
-
+  services.fwupd.enable = true;
   services.flatpak.enable = true;
-
+  services."06cb-009a-fingerprint-sensor" = {                                 
+    enable = true;                                                            
+    backend = "libfprint-tod";
+    calib-data-file = ./calib-data.bin;
+  };   
 
   hardware = {
     graphics = {
@@ -49,29 +55,18 @@
     extraModprobeConfig = ''
       options thinkpad_acpi fan_control=1
     '';
-
+    initrd.luks.devices."luks-06f40cd7-7585-40cd-a701-bc813a68c13b".device = "/dev/disk/by-uuid/06f40cd7-7585-40cd-a701-bc813a68c13b";
   };
+# THINKFAN IF IT WILL BE NECESSARY
+#  services.udev.extraRules = ''
+#    # Symlink for ThinkPad hwmon device
+#    KERNEL=="hwmon*", SUBSYSTEM=="hwmon", ATTR{name}=="thinkpad", SYMLINK+="hwmon-thinkpad"
+#  '';
 
-  #services.udev.extraRules = ''
-  #  KERNEL=="hwmon*", SUBSYSTEM=="hwmon", ATTRS{name}=="thinkpad_hwmon", SYMLINK+="hwmon-thinkpad"
-  #'';
-
-  #services.udev.extraRules = ''
-  #  KERNEL=="hwmon*", SUBSYSTEM=="hwmon", ATTR{name}=="thinkpad", SYMLINK+="hwmon-thinkpad"
-  #'';
-  #services.udev.extraRules = ''
-  #  KERNEL=="hwmon*", SUBSYSTEM=="hwmon", ATTR{name}=="thinkpad", SYMLINK+="hwmon-thinkpad"
-  #'';
-  services.udev.extraRules = ''
-    # Symlink for ThinkPad hwmon device
-    KERNEL=="hwmon*", SUBSYSTEM=="hwmon", ATTR{name}=="thinkpad", SYMLINK+="hwmon-thinkpad"
-  '';
-
-
-  nixpkgs.config.qt5 = {
-    enable = true;
-    platformTheme = "qt5ct";
-  };
+#  nixpkgs.config.qt5 = {
+#    enable = true;
+#    platformTheme = "qt5ct";
+#  };
 
 ##        ?HANDLED BY KDE?
 #  environment.variables = {
@@ -143,7 +138,7 @@
   kdePackages.plasma-desktop
   kdePackages.plasma-workspace
   kdePackages.sddm-kcm
-  inputs.zen-browser.packages.${pkgs.system}.default
+  #inputs.zen-browser.packages.${pkgs.system}.default
   kdePackages.xdg-desktop-portal-kde
   xdg-desktop-portal
   #xdg-desktop-portal-gtk # optional fallback
@@ -164,6 +159,7 @@
       ncurses
       jetbrains-mono
       victor-mono
+      nerd-fonts.tinos
     ];
   };
 
@@ -175,6 +171,8 @@
   #   enableSSHSupport = true;
   # };
   #programs.zsh.enable = true;
+  programs.partition-manager.enable = true;
+
   programs.appimage = {
     enable = true;
     binfmt = true;
@@ -194,17 +192,17 @@
     dbus.enable = true;
     power-profiles-daemon.enable = true;
     printing.enable = false;
-    blueman.enable = true;
+    #blueman.enable = true;
     xserver.enable = true;
     displayManager.sddm = {
     enable = true;
     wayland.enable = true;
     };
     desktopManager.plasma6.enable = true;
-    clamav = {
-      daemon.enable = true;
-      updater.enable = true; 
-    };
+    #clamav = {
+    #  daemon.enable = true;
+    #  updater.enable = true; 
+    #};
   };
 
   #xdg.portal.enable = true;

@@ -5,7 +5,22 @@
 
 with pkgs;
 [
+#  palemoon-bin
+#  stremio
+  libreoffice-qt6-fresh
+  wine
+  kdePackages.kget
+  element-desktop
+  element-web
+  exfatprogs
+  kdePackages.kdesu
+  kdePackages.qtmultimedia
+  librewolf
+  fzf
+  neofetch
+  teams-for-linux
   #spyder
+  floorp-bin
   krita
   inkscape
   obs-studio
@@ -124,7 +139,7 @@ with pkgs;
 #  kdePackages.plasma-vault
   cryfs
   encfs
-  clamav
+  #clamav
   #rkhunter
   #chkrootkit
 

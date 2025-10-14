@@ -21,22 +21,22 @@ in
     #../../home/desktop/hyprlock.nix
     #../../home/desktop/hypridle.nix
     #../../home/desktop/walker.nix
-    ../../home/programs/nixvim.nix
+    #../../home/programs/nixvim.nix
     #../../home/programs/fastfetch.nix
     ##../../home/programs/firefox.nix
     #inputs.hyprland.homeManagerModules.default
     #inputs.nixvim.homeManagerModules.nixvim
-    inputs.nixvim.homeModules.nixvim
+    #inputs.nixvim.homeModules.nixvim
   ];
 
   home.packages = allPackages;
 
   #qt.platformTheme.name = "qt6ct";
-  qt = {
-    enable = true;
-    platformTheme.name = "qtct";
+  #qt = {
+    #enable = true;
+    #platformTheme.name = "qtct";
     #style.name = "Darkly";
-  };
+  #};
   #environment.variables.QT_QPA_PLATFORMTHEME = "qt5ct";
 
 
@@ -73,7 +73,7 @@ in
   home.stateVersion = "24.11";
 
   home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+    #QT_QPA_PLATFORMTHEME = "qt5ct";
     EDITOR = "nvim";
   };
   programs = {
