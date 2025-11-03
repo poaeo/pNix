@@ -151,7 +151,7 @@
     packages = with pkgs; [
       fira-sans
       nerd-fonts._0xproto
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       noto-fonts-cjk-sans
       font-awesome
       #symbola
@@ -258,9 +258,12 @@
       { from = 6881; to = 6999; }   # BitTorrent for Stremio
       { from = 11470; to = 11480; } # Stremio Main Range
     ];
-    allowedUDPPortRanges = [
-      { from = 6881; to = 6999; }   # BitTorrent UDP
-    ];
+    allowedUDPPortRanges =  [ 
+      { from = 1714; to = 1764; }   # KDE Connect
+      { from = 6881; to = 6999; }   # BitTorrent for Stremio
+      { from = 11470; to = 11480; } # Stremio Main Range
+    ]; 
+    
     allowedTCPPorts = [ 11470 ];    # Stremio main port
     allowedUDPPorts = [ 11470 ];    # Stremio main port
   };

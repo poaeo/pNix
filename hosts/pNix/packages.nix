@@ -5,20 +5,35 @@
 
 with pkgs;
 [
-#  palemoon-bin
+  kdePackages.ktorrent
+  bottles
+  sysstat
+  leptonica
+  tesseract4
+  zxing
+  jdk17
+ #  palemoon-bin
 #  stremio
+  nextcloud31
+#  nextcloud-client
+  filezilla 
+#  bottles
+  rambox
+  chromium
+  thunderbird
   libreoffice-qt6-fresh
   wine
   kdePackages.kget
-  element-desktop
-  element-web
+  #element-desktop
+  #element-web
   exfatprogs
   kdePackages.kdesu
   kdePackages.qtmultimedia
+  kdePackages.korganizer
   librewolf
   fzf
   neofetch
-  teams-for-linux
+  #teams-for-linux
   #spyder
   floorp-bin
   krita
@@ -40,7 +55,7 @@ with pkgs;
   busybox
 
   #python313Full
-  kdePackages.merkuro
+  #kdePackages.merkuro
 
   hunspell
   hunspellDicts.tr_TR
@@ -56,7 +71,7 @@ with pkgs;
   #graphite
   #peazip
   #cider-2
-  obsidian
+  #obsidian
   wezterm
   kdePackages.kate
   kdePackages.partitionmanager
