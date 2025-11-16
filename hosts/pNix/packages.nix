@@ -5,6 +5,10 @@
 
 with pkgs;
 [
+  czkawka
+  ydotool
+  ffmpeg_7
+  imagemagick
   kdePackages.ktorrent
   bottles
   sysstat
