@@ -1,0 +1,45 @@
+● pNix
+    State: running
+    Units: 332 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 0 units
+    Since: Fri 2025-11-21 18:49:55 CET; 39min ago
+  systemd: 258
+   CGroup: /
+           ├─init.scope
+           │ └─1 /run/current-system/systemd/lib/systemd/systemd
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─2086 /nix/store/s0gzxmvgffqfxd85954pv0cdhqay8g9v-modemmanager-1.24.0/sbin/ModemManager
+           │ ├─NetworkManager.service
+           │ │ └─1287 /nix/store/37d7nkx63iagvywcx7k65xzpabjq1gid-networkmanager-1.52.1/sbin/NetworkManager --no-daemon
+           │ ├─accounts-daemon.service
+           │ │ └─1157 /nix/store/zi7y51rd3g3cw2ksfp53l6hxpflv3h9d-accountsservice-23.13.9/libexec/accounts-daemon
+           │ ├─bluetooth.service
+           │ │ └─1110 /nix/store/yw19crigjbkambz2kpqy1x4mlk66zanm-bluez-5.83/libexec/bluetooth/bluetoothd -f /etc/bluetooth/main.conf
+           │ ├─dbus.service
+           │ │ └─1111 /nix/store/j8z6fmlwczfl9j00cbrkdjcma7m0ww27-dbus-1.14.10/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile -
+-systemd-activation --syslog-only
+           │ ├─display-manager.service
+           │ │ └─1465 /nix/store/07lhj5jwgrh076iang8mkmw1chp5x97i-sddm-unwrapped-0.21.0/bin/sddm
+           │ ├─fwupd.service
+           │ │ └─11745 /nix/store/ql3pmcnrjq532xc2f3y8q9qz11082lq5-fwupd-2.0.16/libexec/fwupd/fwupd
+           │ ├─nix-daemon.service
+           │ │ └─supervisor
+           │ │   └─1322 nix-daemon --daemon
+           │ ├─nscd.service
+           │ │ └─2991 /nix/store/2kbnky3crh7kp2kj59n2nq3zlgxm4n90-nsncd-1.5.2/bin/nsncd
+           │ ├─polkit.service
+           │ │ └─1293 /nix/store/agpxhj3jzshdvan1kba8cdkiknc4gyy4-polkit-126/lib/polkit-1/polkitd --no-debug
+           │ ├─power-profiles-daemon.service
+           │ │ └─1981 /nix/store/6hk9bvjy6440n6fh0sxkl33r1mldwxwp-power-profiles-daemon-0.30/libexec/power-profiles-daemon
+           │ ├─sshd.service
+           │ │ └─1457 "sshd: /nix/store/8ib653x1l9iscvzvai14s31cnkxh55rx-openssh-10.1p1/bin/sshd -D -f /etc/ssh/sshd_config [listener] 0 of 10-10
+0 startups"
+           │ ├─systemd-journald.service
+           │ │ └─708 /nix/store/f8plklbbq3gwkq1wfq89i3f4wy8rabzn-systemd-258/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─1160 /nix/store/f8plklbbq3gwkq1wfq89i3f4wy8rabzn-systemd-258/lib/systemd/systemd-logind
+           │ ├─systemd-oomd.service
+           │ │ └─943 /nix/store/f8plklbbq3gwkq1wfq89i3f4wy8rabzn-systemd-258/lib/systemd/systemd-oomd
+           │ ├─systemd-timesyncd.service

@@ -5,6 +5,9 @@
 
 with pkgs;
 [
+  fluffychat
+  #youtube-dl
+  kdePackages.kdenlive
   czkawka
   ydotool
   ffmpeg_7
@@ -16,20 +19,14 @@ with pkgs;
   tesseract4
   zxing
   jdk17
- #  palemoon-bin
-#  stremio
   nextcloud31
-#  nextcloud-client
   filezilla 
-#  bottles
   rambox
   chromium
   thunderbird
   libreoffice-qt6-fresh
   wine
   kdePackages.kget
-  #element-desktop
-  #element-web
   exfatprogs
   kdePackages.kdesu
   kdePackages.qtmultimedia
@@ -37,29 +34,21 @@ with pkgs;
   librewolf
   fzf
   neofetch
-  #teams-for-linux
-  #spyder
-  floorp-bin
   krita
   inkscape
   obs-studio
-  protonvpn-gui
   gemini-cli
   corepack
-  #pnpm
   gemini-cli
   nitch
   webcamoid
-  #kdePackages.kamoso
+
    ## SITEE
   nodejs_24
   ripgrep
   ruff
   bind
   busybox
-
-  #python313Full
-  #kdePackages.merkuro
 
   hunspell
   hunspellDicts.tr_TR
