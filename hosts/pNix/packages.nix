@@ -5,6 +5,8 @@
 
 with pkgs;
 [
+  jq
+  element-desktop
   fluffychat
   #youtube-dl
   kdePackages.kdenlive
