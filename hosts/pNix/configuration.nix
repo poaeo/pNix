@@ -79,6 +79,9 @@
     hostName = "pNix";
     #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;
+    networkmanager.plugins = with pkgs; [
+      networkmanager-sstp
+    ];
   };
 
 
@@ -203,6 +206,7 @@
     #  daemon.enable = true;
     #  updater.enable = true; 
     #};
+    #tlp.enable = true;
   };
 
   #xdg.portal.enable = true;

@@ -5,9 +5,14 @@
 
 with pkgs;
 [
+#  nodejs_25
+  cursor-cli
+  networkmanager-sstp
+  zap
+  jetbrains.datagrip
   jq
-  element-desktop
-  fluffychat
+  #element-desktop
+  #fluffychat
   #youtube-dl
   kdePackages.kdenlive
   czkawka
@@ -15,7 +20,7 @@ with pkgs;
   ffmpeg_7
   imagemagick
   kdePackages.ktorrent
-  bottles
+  #bottles
   sysstat
   leptonica
   tesseract4
@@ -24,8 +29,8 @@ with pkgs;
   nextcloud31
   filezilla 
   rambox
-  chromium
-  thunderbird
+  #chromium
+  #thunderbird
   libreoffice-qt6-fresh
   wine
   kdePackages.kget
@@ -36,11 +41,11 @@ with pkgs;
   librewolf
   fzf
   neofetch
-  krita
+  #krita
   inkscape
   obs-studio
   gemini-cli
-  corepack
+  #corepack
   gemini-cli
   nitch
   webcamoid
@@ -112,7 +117,8 @@ with pkgs;
 
   #FUN
   # stremio
-  brave
+  #brave
+  
 
 
   

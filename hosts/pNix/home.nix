@@ -39,6 +39,28 @@ in
       nativeMessagingHosts = [
         pkgs.kdePackages.plasma-browser-integration 
       ];
+      profiles.default = {
+    settings = {
+      # 1. Performance: Enable Hardware Acceleration (VA-API)
+      "media.ffmpeg.vaapi.enabled" = true;
+      "gfx.webrender.all" = true;
+      
+      # 2. Memory: Aggressive Tab Unloading
+      # Unloads idle tabs when system RAM is low
+      "browser.low_commit_space_threshold_mb" = 1000; # 1GB threshold
+      "browser.tabs.unloadOnLowMemory" = true;
+      
+      # 3. Privacy & Bloat: Disable Telemetry/Pocket (Saves CPU)
+      "extensions.pocket.enabled" = false;
+      "datareporting.healthreport.uploadEnabled" = false;
+      "toolkit.telemetry.enabled" = false;
+      
+      # 4. UI: Minimalist (Saves GPU/RAM)
+      "browser.compactmode.show" = true;
+      "browser.aboutConfig.showWarning" = false;
+    };
+  };
+
     };
   };
 }
